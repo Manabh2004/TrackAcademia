@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Rahul Sharma",
+    "email": "rahul1@example.com",
+    "reg_no": "21CSE001",
+    "phone": "9876543210",
+    "parent_phone": "9876500000",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Priya Singh",
+    "email": "priya2@example.com",
+    "reg_no": "21CSE002",
+    "phone": "9876543211",
+    "parent_phone": "9876500001",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Amit Verma",
+    "email": "amit3@example.com",
+    "reg_no": "21CSE003",
+    "phone": "9876543212",
+    "parent_phone": "9876500002",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Sneha Patel",
+    "email": "sneha4@example.com",
+    "reg_no": "21CSE004",
+    "phone": "9876543213",
+    "parent_phone": "9876500003",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Karan Mehta",
+    "email": "karan5@example.com",
+    "reg_no": "21CSE005",
+    "phone": "9876543214",
+    "parent_phone": "9876500004",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Neha Gupta",
+    "email": "neha6@example.com",
+    "reg_no": "21CSE006",
+    "phone": "9876543215",
+    "parent_phone": "9876500005",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Rohit Kumar",
+    "email": "rohit7@example.com",
+    "reg_no": "21CSE007",
+    "phone": "9876543216",
+    "parent_phone": "9876500006",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Ananya Das",
+    "email": "ananya8@example.com",
+    "reg_no": "21CSE008",
+    "phone": "9876543217",
+    "parent_phone": "9876500007",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Vikram Singh",
+    "email": "vikram9@example.com",
+    "reg_no": "21CSE009",
+    "phone": "9876543218",
+    "parent_phone": "9876500008",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  },
+  {
+    "name": "Pooja Nair",
+    "email": "pooja10@example.com",
+    "reg_no": "21CSE010",
+    "phone": "9876543219",
+    "parent_phone": "9876500009",
+    "year": 3,
+    "branch": "CSE",
+    "section": "A",
+    "semester": 5
+  }
+]

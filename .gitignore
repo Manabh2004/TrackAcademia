@@ -1,0 +1,13 @@
+node_modules/
+**/node_modules/
+uploads/
+backend/uploads/
+.env
+**/.env
+.env.*
+**/.env.*
+*.sqlite
+*.sqlite3
+dist/
+.expo/
+web/dist/
