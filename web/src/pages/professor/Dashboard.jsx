@@ -8,11 +8,7 @@ import TimetableView from './TimetableView';
 import DoubtInbox from './DoubtInbox';
 import { colors, layout, surface, buttons } from '../../theme';
 
-const DEFAULT_API_URL = import.meta.env.VITE_API_URL || (
-  import.meta.env.DEV
-    ? 'http://localhost:5000/api'
-    : 'https://trackacademia-backend.onrender.com/api'
-);
+const DEFAULT_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 export default function ProfDashboard() {
   const { user, logout } = useStore();

@@ -139,28 +139,14 @@ If you want the mobile app to use plain localhost in an environment that support
 - Mobile emulator: uses local backend automatically
 - Mobile physical phone: cannot use `localhost` directly; run `npm run setup:local-api` to generate a LAN URL instead
 
-### 5. Deployment
+### 5. Create The First Admin On A Fresh Backend
 
-Deployment is optional. If you want hosted versions later:
+The backend currently includes a temporary setup route for creating the first admin on a new system.
 
-- Render backend: set the backend service root to `backend`
-- Vercel web: set the project root to `web`
-- Expo/EAS mobile: set `EXPO_PUBLIC_API_URL` to your deployed backend URL
-
-### 6. Create The First Admin On A Fresh Deployment
-
-The backend currently includes a temporary setup route for creating the first admin on a new deployed database.
-
-After the backend is live, open:
+After the backend is running, open:
 
 ```bash
-https://YOUR-BACKEND-URL/api/setup?secret=SETUP_SECRET_DELETE_ME
-```
-
-Example:
-
-```bash
-https://trackacademia-backend.onrender.com/api/setup?secret=SETUP_SECRET_DELETE_ME
+http://localhost:5000/api/setup?secret=SETUP_SECRET_DELETE_ME
 ```
 
 It will create or update this admin account:
@@ -170,9 +156,9 @@ It will create or update this admin account:
 
 Important:
 
-- use it once on a fresh deployment
+- use it once on a fresh backend
 - then delete the `/api/setup` route from `backend/src/index.js`
-- redeploy the backend after removing it
+- restart or redeploy the backend after removing it
 
 ## Files To Commit
 
@@ -190,5 +176,5 @@ Do not commit:
 
 ## Notes
 
-- The backend currently includes a temporary `/api/setup` route in `backend/src/index.js` for first-admin creation on a fresh deployment. Delete that route after you use it in production.
+- The backend currently includes a temporary `/api/setup` route in `backend/src/index.js` for first-admin creation on a fresh backend. Delete that route after you use it.
 - The web app uses a Vercel SPA rewrite in `web/vercel.json`, so browser refreshes on nested routes work after deployment.
