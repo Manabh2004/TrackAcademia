@@ -8,6 +8,49 @@ TrackAcademia is split into three apps:
 
 This repo is now set up so someone can clone it from GitHub and run it locally on `localhost` without needing Render or Vercel.
 
+## Quickstart
+
+```bash
+git clone https://github.com/Manabh2004/TrackAcademia.git
+cd TrackAcademia
+```
+
+1. Start the backend:
+
+```bash
+cd backend
+npm install
+copy .env.example .env
+```
+
+Set `JWT_SECRET` in `backend/.env`, then run:
+
+```bash
+npm run dev
+```
+
+2. Start the web app in a new terminal:
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+3. Start the mobile app in a third terminal:
+
+```bash
+cd mobile
+npm install
+npm start
+```
+
+4. Open the local backend health check:
+
+```bash
+http://localhost:5000/api/health
+```
+
 ## Clone And Run
 
 ### 1. Backend
@@ -58,6 +101,12 @@ npm run dev
 ```
 
 By default, local web development talks to `http://localhost:5000/api`.
+
+### Admin Demo Spreadsheet
+
+The repo includes [USER_ADD_DEMO.xlsx](</c:/Users/ASUS/OneDrive/Desktop/acad-iit/academic-app/USER_ADD_DEMO.xlsx>) as a demo spreadsheet for the admin add-user flow.
+
+Use it as sample input when demonstrating bulk/admin user addition.
 
 ### 3. Mobile
 
