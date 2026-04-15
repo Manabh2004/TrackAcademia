@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import api from '../../api';
 import { colors, surface, form, buttons, table } from '../../theme';
 
+const DEFAULT_API_URL = import.meta.env.VITE_API_URL || 'https://trackacademia-backend.onrender.com/api';
+
 export default function AttendanceUpload() {
   const [subjects, setSubjects] = useState([]);
   const [selectedSubject, setSelectedSubject] = useState('');
@@ -91,9 +93,7 @@ export default function AttendanceUpload() {
         section: selected?.section ?? '',
       });
 
-      const url = `${
-        import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
-      }/reports/semester-sheet/${selectedSubject}?${params}`;
+      const url = `${DEFAULT_API_URL}/reports/semester-sheet/${selectedSubject}?${params}`;
 
       const res = await fetch(url, {
         headers: {

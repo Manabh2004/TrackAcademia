@@ -8,6 +8,8 @@ import TimetableView from './TimetableView';
 import DoubtInbox from './DoubtInbox';
 import { colors, layout, surface, buttons } from '../../theme';
 
+const DEFAULT_API_URL = import.meta.env.VITE_API_URL || 'https://trackacademia-backend.onrender.com/api';
+
 export default function ProfDashboard() {
   const { user, logout } = useStore();
   const navigate = useNavigate();
@@ -17,9 +19,7 @@ export default function ProfDashboard() {
     try {
       const token = localStorage.getItem('token');
 
-      const url = `${
-        import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
-      }/reports/semester-sheet/${subjectId}?year=${year}&branch=${branch}&section=${section}`;
+      const url = `${DEFAULT_API_URL}/reports/semester-sheet/${subjectId}?year=${year}&branch=${branch}&section=${section}`;
 
       const res = await fetch(url, {
         headers: {

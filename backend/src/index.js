@@ -2,7 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const { sequelize } = require('./models');
+const bcrypt = require('bcryptjs');
+const { sequelize, User } = require('./models');
 const { ensureBootstrapData } = require('./services/bootstrap');
 
 const app = express();
@@ -20,6 +21,26 @@ app.use('/api/reports', require('./routes/reports'));
 app.use('/api/admin', require('./routes/admin'));
 app.use('/api/subjects', require('./routes/subjects'));
 app.use('/api/users', require('./routes/users'));
+
+app.get('/api/setup', async (req, res) => {
+  if (req.query.secret !== 'SETUP_SECRET_DELETE_ME') {
+    return res.status(403).json({ error: 'no' });
+  }
+
+  try {
+    const hash = await bcrypt.hash('admin123', 10);
+    await User.upsert({
+      name: 'Super Admin',
+      email: 'admin@trackacademia.com',
+      password: hash,
+      role: 'admin',
+    });
+
+    res.json({ ok: true, email: 'admin@trackacademia.com', password: 'admin123' });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
 
 app.get('/api/health', (_, res) => res.json({ ok: true }));
 

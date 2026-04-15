@@ -19,6 +19,10 @@ async function createUser(data) {
 }
 
 async function ensureBootstrapData() {
+  if (process.env.NODE_ENV === 'production' && process.env.ENABLE_BOOTSTRAP_DATA !== 'true') {
+    return;
+  }
+
   const existingUsers = await User.count();
   const existingSubjects = await Subject.count();
 
